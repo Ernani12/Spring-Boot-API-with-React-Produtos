@@ -1,11 +1,14 @@
+
+package com.api.produtos.model;
+
 import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Component
 @Getter
 @Setter
+@Component
 public class ResponseModel{
 
     private String Message;
