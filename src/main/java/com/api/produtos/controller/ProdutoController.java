@@ -9,6 +9,9 @@ import com.api.produtos.model.Produto;
 import com.api.produtos.repository.ProdutoRepository;
 import com.api.produtos.service.ProdutoService;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RestController
@@ -29,4 +32,11 @@ public class ProdutoController {
     public String route(){
         return "API PIZZA";
     }
+
+    @PostMapping("/cadastrar")
+    public ResponseEntity<?> cadastrar(@RequestBody Produto p) {
+        return S.cadastrar(p);
+    }
+    
+
 }
