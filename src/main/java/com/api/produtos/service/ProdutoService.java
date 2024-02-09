@@ -55,4 +55,13 @@ public class ProdutoService {
         
     }
 
+
+    public ResponseEntity<ResponseModel> remover (long codigo){
+       pr.deleteById(codigo);
+
+       RM.setMessage("produto removido");
+       return new  ResponseEntity<ResponseModel>(RM,HttpStatus.OK);      
+
+    }
+
 }
