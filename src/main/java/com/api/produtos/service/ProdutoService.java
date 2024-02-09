@@ -36,8 +36,6 @@ public class ProdutoService {
         }else{
             return new  ResponseEntity<Produto>(pr.save(p),HttpStatus.CREATED);
         }
-
-
     }
 
 }
