@@ -38,4 +38,21 @@ public class ProdutoService {
         }
     }
 
+
+    public ResponseEntity<?> Alterar(Produto p){
+
+        if(p.getNome().equals("")){
+            RM.setMessage("Nome é obrigatorio");
+            return new ResponseEntity<ResponseModel>(RM, HttpStatus.BAD_REQUEST);
+        }
+        else if(p.getMarca().equals("")){
+            RM.setMessage("Marca Obrigatoria");
+            return new ResponseEntity<ResponseModel>(RM, HttpStatus.BAD_REQUEST);
+        }else{
+            RM.setMessage("FOI CADASTRADO");
+            return new  ResponseEntity<Produto>(pr.save(p),HttpStatus.OK);      
+        }
+        
+    }
+
 }

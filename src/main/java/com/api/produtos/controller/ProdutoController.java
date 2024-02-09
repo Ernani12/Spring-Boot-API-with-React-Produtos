@@ -38,5 +38,11 @@ public class ProdutoController {
         return S.cadastrar(p);
     }
     
+    @PostMapping("/alterar")
+    public ResponseEntity<?> alterar(@RequestBody Produto p) {
+        return S.Alterar(p);
+    }
 
+
+    
 }
