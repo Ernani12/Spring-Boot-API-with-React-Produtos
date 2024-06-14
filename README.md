@@ -1,4 +1,4 @@
-Backend Java Aplication 
+Backend Java Aplication (JAVA)
 React  Consuming Application
 Postgres
 
